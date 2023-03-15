@@ -1,0 +1,17 @@
+name: Deploy
+
+on:
+  release:
+    types:
+      - released
+
+jobs:
+  deploy:
+    name: Deploy to gh-pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get static content
+        env:
+          EVENT_PAYLOAD: ${{ toJson(github.event) }}
+        run: |
+          echo "${EVENT_PAYLOAD}
