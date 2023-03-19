@@ -33,7 +33,7 @@ jobs:
           git_push_gpgsign: true
       - name: Release
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           GIT_AUTHOR_NAME: "HOBY New York East"
           GIT_AUTHOR_EMAIL: "39279726+hobynye-admin@users.noreply.github.com"
           GIT_COMMITTER_NAME: "HOBY New York East"
