@@ -5,13 +5,37 @@ on:
     types:
       - released
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     name: Deploy to gh-pages
     runs-on: ubuntu-latest
     steps:
-      - name: Get static content
-        env:
-          EVENT_PAYLOAD: ${{ toJson(github.event) }}
-        run: |
-          echo "${EVENT_PAYLOAD}
+      - name: Download latest release
+        uses: robinraju/release-downloader@v1.7
+        with:
+          latest: true
+          tarBall: true
+          zipBall: false
+      - run: |
+          tar -xf *.tar --directory site
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: 'site/'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
