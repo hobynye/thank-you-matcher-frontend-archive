@@ -45,29 +45,13 @@
       "main",
       "next",
       "next-major",
-      {
-        "name": "beta",
-        "prerelease": true
-      },
-      {
-        "name": "alpha",
-        "prerelease": true
-      }
+      {"name": "beta", "prerelease": true},
+      {"name": "alpha", "prerelease": true}
     ],
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
-      [
-        "@semantic-release/github",
-        {
-          "assets": [
-            {
-              "path": "dist/**/*",
-              "label": "Static Content"
-            }
-          ]
-        }
-      ]
+      ["@semantic-release/github", {"assets": [{"path": "dist/**/*", "label": "Static Content"}]}]
     ],
     "preset": "angular"
   }
