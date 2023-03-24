@@ -51,7 +51,7 @@
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
-      ["@semantic-release/github", {"assets": [{"path": "dist/**/*", "label": "Static Content"}]}]
+      ["@semantic-release/github", {"assets": [{"path": "dist/thank-you-matcher", "label": "Static Content"}]}]
     ],
     "preset": "angular"
   }
