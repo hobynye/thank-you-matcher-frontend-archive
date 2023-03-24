@@ -23,6 +23,8 @@ jobs:
         run: npm ci
       - name: Build
         run: npx ng build
+      - name: Create tarball
+        run: tar -czf thank-you-matcher.tar.gz dist/thank-you-matcher/*
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
