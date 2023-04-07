@@ -25,6 +25,9 @@
               "src/assets"
             ],
             "styles": [
+              {
+                "input": "src/hoby-theme.scss"
+              },
               "src/styles.css"
             ],
             "scripts": []
@@ -88,6 +91,9 @@
               "src/assets"
             ],
             "styles": [
+              {
+                "input": "src/hoby-theme.scss"
+              },
               "src/styles.css"
             ],
             "scripts": [],
