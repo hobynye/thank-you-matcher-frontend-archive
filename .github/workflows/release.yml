@@ -24,7 +24,10 @@ jobs:
       - name: Build
         run: npx ng build
       - name: Create tarball
-        run: tar -czf thank-you-matcher.tar.gz dist/thank-you-matcher/*
+        run: |
+          echo "tym.hobynye.org" > dist/thank-you-matcher/CNAME
+          echo "" > dist/thank-you-matcher/.nojekyll
+          tar -czf thank-you-matcher.tar.gz dist/thank-you-matcher/*
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
