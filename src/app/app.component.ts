@@ -8,6 +8,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title: string = 'Thank You Matcher';
   isExpanded: boolean = false;
-
-  constructor() {}
 }
