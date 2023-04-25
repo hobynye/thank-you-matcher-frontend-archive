@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'thank-you-matcher-frontend';
+  title: string = 'Thank You Matcher';
+  isExpanded: boolean = false;
 }
