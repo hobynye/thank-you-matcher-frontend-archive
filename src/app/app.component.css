@@ -11,26 +11,36 @@
   margin: 0 16px;
 }
 
-.menu-item {
+.nav-list-item-text {
   margin-left: 8px;
+  position: relative;
+  bottom: 5px
 }
 
-mat-sidenav {
-  display: flex;
-  flex-direction: column;
+.content {
+  left: 3px;
+  min-height: calc(100vh - 128px);
+  max-width: calc(100vw - 88px);
+}
+
+.content.expanded {
+  left: 110px;
+  max-width: calc(100vw - 195px);
 }
 
 .chevron-button {
+  position: absolute;
+  left: calc(88px - 24px);
+  bottom: 64px;
+  z-index: 25;
+
   transition: 300ms ease-in-out;
   transform: rotate(0deg);
 }
 
 .chevron-button.rotated {
   transform: rotate(180deg);
-}
-
-.content {
-  min-height: 75vh;
+  left: calc(195px - 24px);
 }
 
 .footer {
