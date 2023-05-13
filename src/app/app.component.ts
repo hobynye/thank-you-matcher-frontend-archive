@@ -7,5 +7,37 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title: string = 'Thank You Matcher';
-  isExpanded: boolean = false;
+  mods = [
+    {
+      icon: 'school',
+      name: 'Ambassadors',
+      links: [
+        {url: '/ambassasor/list', text: 'View List'},
+        {url: '/ambassasors/import', text: 'Import'},
+      ]
+    },
+    {
+      icon: 'groups',
+      name: 'Staff',
+      links: [
+        {url: '/staff/list', text: 'View List'},
+        {url: '/staff/import', text: 'Import'},
+      ]
+    },
+    {
+      icon: 'attach_money',
+      name: 'Donors',
+      links: [
+        {url: '/donors/list', text: 'View List'},
+        {url: '/donors/import', text: 'Import'},
+      ]
+    },
+    {
+      icon: 'join_inner',
+      name: 'Matches',
+      links: [
+        {url: '/match/list', text: 'View List'},
+      ]
+    },
+  ];
 }
