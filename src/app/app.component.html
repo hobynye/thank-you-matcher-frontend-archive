@@ -5,44 +5,27 @@
 </mat-toolbar>
 
 <mat-sidenav-container>
+  <!-- Navigation -->
   <mat-sidenav mode="side" opened="true">
-    <mat-nav-list>
-      <mat-list-item>
-        <a mat-list-item routerLink="/ambassadors">
-          <mat-icon>school</mat-icon>
-          <span *ngIf="isExpanded" class="nav-list-item-text">Ambassadors</span>
-        </a>
-      </mat-list-item>
-
-      <mat-list-item>
-        <a mat-list-item routerLink="/staff">
-          <mat-icon>groups</mat-icon>
-          <span *ngIf="isExpanded" class="nav-list-item-text">Staff</span>
-        </a>
-      </mat-list-item>
-
-      <mat-list-item>
-        <a mat-list-item routerLink="/donors">
-          <mat-icon>attach_money</mat-icon>
-          <span *ngIf="isExpanded" class="nav-list-item-text">Donors</span>
-        </a>
-      </mat-list-item>
-
-      <mat-list-item>
-        <a mat-list-item routerLink="/matches">
-          <mat-icon>join_inner</mat-icon>
-          <span *ngIf="isExpanded" class="nav-list-item-text">Matches</span>
-        </a>
-      </mat-list-item>
-    </mat-nav-list>
+    <mat-accordion multi>
+      <mat-expansion-panel *ngFor="let mod of mods" hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon class="nav-icon">{{ mod.icon }}</mat-icon>
+            {{ mod.name }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <a mat-list-item *ngFor="let link of mod.links" routerLink="{{ link.url }}">{{ link.text }}</a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+    </mat-accordion>
   </mat-sidenav>
 
-  <mat-sidenav-content class="content" [ngClass]="{ expanded: isExpanded }" role="main">
+  <mat-sidenav-content class="content" role="main">
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
-
-<mat-icon class="chevron-button" [ngClass]="{ rotated: isExpanded }" (click)="isExpanded = !isExpanded">chevron_right</mat-icon>
 
 <!-- Footer -->
 <mat-toolbar color="primary" class="footer" role="banner" aria-label="footer">
