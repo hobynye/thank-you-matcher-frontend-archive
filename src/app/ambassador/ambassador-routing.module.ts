@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AmbassadorComponent } from './ambassador.component';
 
-const routes: Routes = [{ path: '', component: AmbassadorComponent }];
+import { AmbassadorListComponent } from "./ambassador-list/ambassador-list.component";
+
+const routes: Routes = [
+  { path: 'list', component: AmbassadorListComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
