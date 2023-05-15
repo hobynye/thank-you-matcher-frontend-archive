@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AmbassadorRoutingModule } from './ambassador-routing.module';
-import { AmbassadorComponent } from './ambassador.component';
 import { AmbassadorListComponent } from './ambassador-list/ambassador-list.component';
+import { AmbassadorImportComponent } from './ambassador-import/ambassador-import.component';
 
 @NgModule({
   declarations: [
-    AmbassadorComponent,
-    AmbassadorListComponent
+    AmbassadorListComponent,
+    AmbassadorImportComponent
   ],
   imports: [
     CommonModule,
