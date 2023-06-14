@@ -1,6 +1,8 @@
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
+process.env.CHROME_BIN = require('puppeteer').executablePath()
+
 module.exports = function (config) {
   config.set({
     basePath: '',
@@ -26,14 +28,14 @@ module.exports = function (config) {
     },
     coverageReporter: {
       dir: require('path').join(__dirname, './coverage/thank-you-matcher'),
+      subdir: '.',
       reporters: [
-        { type: 'html', subdir: 'html' },
-        { type: 'lcovonly', subdir: 'lcov'},
+        { type: 'lcovonly' },
         { type: 'text-summary' }
       ]
     },
-    reporters: ['progress', 'kjhtml', 'coverage'],
-    browsers: ['Chrome'],
-    restartOnFileChange: true
+    reporters: ['progress', 'coverage'],
+    browsers: ['ChromeHeadless'],
+    autoWatch: false
   });
 };
