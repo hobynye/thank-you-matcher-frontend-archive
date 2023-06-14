@@ -36,6 +36,7 @@ module.exports = function (config) {
     },
     reporters: ['progress', 'coverage'],
     browsers: ['ChromeHeadless'],
-    autoWatch: false
+    autoWatch: false,
+    singleRun: true
   });
 };
