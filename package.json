@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.1.1",
-    "@angular/cli": "~16.1.0",
+    "@angular/cli": "~16.1.1",
     "@angular/compiler-cli": "^16.1.0",
     "@qiwi/semantic-release-gh-pages-plugin": "^5.2.5",
     "@types/jasmine": "~4.3.4",
