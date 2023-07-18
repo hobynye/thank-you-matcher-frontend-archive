@@ -30,7 +30,7 @@
     "@angular-devkit/build-angular": "^16.1.4",
     "@angular/cli": "~16.1.4",
     "@angular/compiler-cli": "^16.1.5",
-    "@qiwi/semantic-release-gh-pages-plugin": "^5.2.5",
+    "@qiwi/semantic-release-gh-pages-plugin": "^5.2.6",
     "@types/jasmine": "~4.3.5",
     "jasmine-core": "~5.0.1",
     "karma": "~6.4.2",
