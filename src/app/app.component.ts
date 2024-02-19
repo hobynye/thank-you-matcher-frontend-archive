@@ -12,8 +12,8 @@ export class AppComponent {
       icon: 'school',
       name: 'Ambassadors',
       links: [
-        {url: '/ambassasor/list', text: 'View List'},
-        {url: '/ambassasors/import', text: 'Import'},
+        {url: '/ambassadors/list', text: 'View List'},
+        {url: '/ambassadors/import', text: 'Import'},
       ]
     },
     {
