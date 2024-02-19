@@ -63,10 +63,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "thank-you-matcher:build:production"
+              "buildTarget": "thank-you-matcher:build:production"
             },
             "development": {
-              "browserTarget": "thank-you-matcher:build:development"
+              "buildTarget": "thank-you-matcher:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,7 +74,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "thank-you-matcher:build"
+            "buildTarget": "thank-you-matcher:build"
           }
         },
         "test": {
