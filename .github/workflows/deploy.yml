@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download latest release
-        uses: robinraju/release-downloader@v1.7
+        uses: robinraju/release-downloader@v1.9
         with:
           latest: true
           filename: thank-you-matcher.tar.gz
