@@ -7,8 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "ci": "ng test --no-watch --no-progress",
-    "semantic-release": "semantic-release"
+    "semantic-release": "npx semantic-release"
   },
   "private": true,
   "dependencies": {
@@ -35,7 +34,7 @@
     "jasmine-core": "~5.1.2",
     "karma": "~6.4.2",
     "karma-chrome-launcher": "~3.2.0",
-    "karma-coverage": "~2.2.1",
+    "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "puppeteer": "^22.1.0",
@@ -44,10 +43,7 @@
   },
   "release": {
     "branches": [
-      "+([0-9])?(.{+([0-9]),x}).x",
       "main",
-      "next",
-      "next-major",
       {
         "name": "beta",
         "prerelease": true
@@ -64,10 +60,7 @@
         "@semantic-release/github",
         {
           "assets": [
-            {
-              "path": "thank-you-matcher.tar.gz",
-              "label": "Site Contents"
-            }
+            "dist/**"
           ]
         }
       ],
