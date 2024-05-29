@@ -1,7 +1,19 @@
-<mat-toolbar color="primary" class="mat-toolbar mat-elevation-z12">
+<mat-toolbar color="primary" class="mat-toolbar mat-elevation-z8 header">
   <span class="spacer"></span>
   <span class="title">{{ title }}</span>
   <span class="spacer"></span>
 </mat-toolbar>
 
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened fixedInViewport fixedTopGap="64" fixedBottomGap="64" class="nav">
+    <a mat-button routerLink="/admin" routerLinkActive="active" >Admin</a>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<mat-toolbar color="primary" class="footer">
+
+</mat-toolbar>
