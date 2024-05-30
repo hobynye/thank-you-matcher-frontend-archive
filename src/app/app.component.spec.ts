@@ -3,6 +3,7 @@ import { AppComponent } from './app.component';
 import { Component } from "@angular/core";
 import { provideRouter, RouterLink } from "@angular/router";
 import { By } from "@angular/platform-browser";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @Component({standalone: true, selector: 'router-outlet', template: ''})
 class RouterOutletStubComponent {}
@@ -16,7 +17,8 @@ describe('AppComponent', () => {
       imports: [
         AppComponent,
         RouterLink,
-        RouterOutletStubComponent
+        RouterOutletStubComponent,
+        BrowserAnimationsModule,
       ],
       providers: [
         provideRouter([])

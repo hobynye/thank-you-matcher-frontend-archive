@@ -42,7 +42,7 @@ describe('AmbassadorService', () => {
       expect(ambassador).toBe(AMBASSADORS[0]);
     });
 
-    const request = httpTesting.expectOne('/api/ambassadors/1');
+    const request = httpTesting.expectOne('http://localhost:8080/api/ambassadors/1');
     expect(request.cancelled).toBeFalsy();
     expect(request.request.method).toBe('GET');
     expect(request.request.responseType).toBe('json');
@@ -56,7 +56,7 @@ describe('AmbassadorService', () => {
       expect(ambassadors).toBe(AMBASSADORS);
     });
 
-    const request = httpTesting.expectOne('/api/ambassadors');
+    const request = httpTesting.expectOne('http://localhost:8080/api/ambassadors');
     expect(request.cancelled).toBeFalsy();
     expect(request.request.method).toBe('GET');
     expect(request.request.responseType).toBe('json');
