@@ -1,0 +1,9 @@
+<mat-tab-group [(selectedIndex)]="currentTab">
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon>person</mat-icon>
+      Ambassadors
+    </ng-template>
+    <app-ambassador-table></app-ambassador-table>
+  </mat-tab>
+</mat-tab-group>

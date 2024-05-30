@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from "@angular/router";
+import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
 
 import {MatToolbar} from "@angular/material/toolbar";
-import {MatIcon} from "@angular/material/icon";
-import {MatIconAnchor, MatIconButton} from "@angular/material/button";
-import {MatTooltip} from "@angular/material/tooltip";
+import {MatSidenav, MatSidenavContainer, MatSidenavContent} from "@angular/material/sidenav";
+import {MatAnchor} from "@angular/material/button";
 
 
 @Component({
@@ -14,11 +13,13 @@ import {MatTooltip} from "@angular/material/tooltip";
   imports: [
     CommonModule,
     RouterOutlet,
+    RouterLink,
+    RouterLinkActive,
     MatToolbar,
-    MatIcon,
-    MatIconButton,
-    MatTooltip,
-    MatIconAnchor
+    MatSidenavContainer,
+    MatSidenav,
+    MatSidenavContent,
+    MatAnchor,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
