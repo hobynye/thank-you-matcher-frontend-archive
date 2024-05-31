@@ -19,6 +19,7 @@ describe('AdminComponent', () => {
         provideHttpClient(),
         provideHttpClientTesting()
       ]
+
     })
     .compileComponents();
 
