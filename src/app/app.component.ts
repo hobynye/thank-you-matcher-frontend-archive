@@ -1,43 +1,29 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
+
+import {MatToolbar} from "@angular/material/toolbar";
+import {MatSidenav, MatSidenavContainer, MatSidenavContent} from "@angular/material/sidenav";
+import {MatAnchor} from "@angular/material/button";
+
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive,
+    MatToolbar,
+    MatSidenavContainer,
+    MatSidenav,
+    MatSidenavContent,
+    MatAnchor,
+  ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title: string = 'Thank You Matcher';
-  mods = [
-    {
-      icon: 'school',
-      name: 'Ambassadors',
-      links: [
-        {url: '/ambassasor/list', text: 'View List'},
-        {url: '/ambassasors/import', text: 'Import'},
-      ]
-    },
-    {
-      icon: 'groups',
-      name: 'Staff',
-      links: [
-        {url: '/staff/list', text: 'View List'},
-        {url: '/staff/import', text: 'Import'},
-      ]
-    },
-    {
-      icon: 'attach_money',
-      name: 'Donors',
-      links: [
-        {url: '/donors/list', text: 'View List'},
-        {url: '/donors/import', text: 'Import'},
-      ]
-    },
-    {
-      icon: 'join_inner',
-      name: 'Matches',
-      links: [
-        {url: '/match/list', text: 'View List'},
-      ]
-    },
-  ];
+  title = 'Thank You Matcher';
 }
