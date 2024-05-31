@@ -4,6 +4,8 @@ import { AmbassadorTableComponent } from './ambassador-table.component';
 import { AmbassadorService } from "../ambassador/ambassador.service";
 import {Ambassador} from "../ambassador/ambassador";
 import {Observable, of} from "rxjs";
+import {provideHttpClient} from "@angular/common/http";
+import {provideHttpClientTesting} from "@angular/common/http/testing";
 
 class MockAmbassadorService extends AmbassadorService {
   private AMBASSADORS: Ambassador[] = [
@@ -24,7 +26,11 @@ describe('AmbassadorTableComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [AmbassadorTableComponent],
-      providers: [{provide: AmbassadorService, useValue: MockAmbassadorService}],
+      providers: [
+        provideHttpClient(),
+        provideHttpClientTesting(),
+        AmbassadorService
+      ],
     })
     .compileComponents();
 

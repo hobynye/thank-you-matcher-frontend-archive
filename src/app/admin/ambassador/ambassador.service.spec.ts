@@ -47,7 +47,7 @@ describe('AmbassadorService', () => {
     expect(request.request.method).toBe('GET');
     expect(request.request.responseType).toBe('json');
 
-    request.flush({payload: AMBASSADORS[1]});
+    request.flush(AMBASSADORS[0]);
   });
 
   it('should get all ambassadors', () => {
@@ -61,6 +61,6 @@ describe('AmbassadorService', () => {
     expect(request.request.method).toBe('GET');
     expect(request.request.responseType).toBe('json');
 
-    request.flush({payload: AMBASSADORS});
+    request.flush(AMBASSADORS);
   });
 });
