@@ -49,7 +49,7 @@ describe('AppComponent', () => {
     const navSidePanel = compiled.querySelector('.nav');
 
     expect(navSidePanel?.children.length).toEqual(1);
-    expect(navSidePanel?.children[0].textContent).toContain('Admin');
+    expect(navSidePanel?.children[0].textContent).toContain('Home');
   });
 
   it('should get RouterLinks from template', () => {
@@ -58,6 +58,6 @@ describe('AppComponent', () => {
     let routerLinks = linkDes.map((de) => de.injector.get(RouterLink));
 
     expect(routerLinks.length).withContext('should have 1 routerLinks').toBe(1);
-    expect(routerLinks[0].href).toBe('/admin');
+    expect(routerLinks[0].href).toBe('/');
   });
 });
