@@ -22,7 +22,7 @@ jobs:
       - name: Install Dependencies
         run: npm ci
       - name: Test
-        run: npx ng test --no-watch --no-progress
+        run: npx ng ci --no-watch --no-progress
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
