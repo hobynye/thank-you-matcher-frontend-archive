@@ -3,7 +3,7 @@ import { TestBed } from '@angular/core/testing';
 import { provideHttpClient } from "@angular/common/http";
 import { HttpTestingController, provideHttpClientTesting } from "@angular/common/http/testing";
 import { AmbassadorService } from './ambassador.service';
-import { Ambassador } from "./ambassador";
+import { Ambassador } from "../model/ambassador";
 
 describe('AmbassadorService', () => {
   let httpTesting: HttpTestingController;
@@ -42,7 +42,7 @@ describe('AmbassadorService', () => {
       expect(ambassador).toBe(AMBASSADORS[0]);
     });
 
-    const request = httpTesting.expectOne('http://localhost:8080/api/ambassadors/1');
+    const request = httpTesting.expectOne('/ambassadors/1');
     expect(request.cancelled).toBeFalsy();
     expect(request.request.method).toBe('GET');
     expect(request.request.responseType).toBe('json');
@@ -56,7 +56,7 @@ describe('AmbassadorService', () => {
       expect(ambassadors).toBe(AMBASSADORS);
     });
 
-    const request = httpTesting.expectOne('http://localhost:8080/api/ambassadors');
+    const request = httpTesting.expectOne('/ambassadors');
     expect(request.cancelled).toBeFalsy();
     expect(request.request.method).toBe('GET');
     expect(request.request.responseType).toBe('json');

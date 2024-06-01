@@ -10,8 +10,8 @@ import {
   MatRow, MatRowDef, MatTable
 } from "@angular/material/table";
 import {MatSort} from "@angular/material/sort";
-import {Ambassador} from "../ambassador/ambassador";
-import {AmbassadorService} from "../ambassador/ambassador.service";
+import {Ambassador} from "../../model/ambassador";
+import {AmbassadorService} from "../../service/ambassador.service";
 
 @Component({
   selector: 'app-ambassador-table',
