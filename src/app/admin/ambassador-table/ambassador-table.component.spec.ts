@@ -1,8 +1,8 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import { AmbassadorTableComponent } from './ambassador-table.component';
-import { AmbassadorService } from "../ambassador/ambassador.service";
-import {Ambassador} from "../ambassador/ambassador";
+import { AmbassadorService } from "../../service/ambassador.service";
+import {Ambassador} from "../../model/ambassador";
 import {Observable, of} from "rxjs";
 import {provideHttpClient} from "@angular/common/http";
 import {provideHttpClientTesting} from "@angular/common/http/testing";
