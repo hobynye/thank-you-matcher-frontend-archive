@@ -98,27 +98,6 @@
               },
               "src/styles.css"
             ],
-            "scripts": []
-          }
-        },
-        "ci": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
-            "tsConfig": "tsconfig.spec.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              {
-                "input": "src/hoby-theme.scss"
-              },
-              "src/styles.css"
-            ],
             "scripts": [],
             "karmaConfig": "karma.conf.js"
           }
