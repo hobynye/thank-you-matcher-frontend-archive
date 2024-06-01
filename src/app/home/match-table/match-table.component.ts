@@ -34,9 +34,7 @@ export class MatchTableComponent implements AfterViewInit {
   displayedColumns: string[] = ['student', 'org', 'donor', 'address', 'donation'];
   matches: Match[] = [];
 
-  constructor() { }
-
-  ngAfterViewInit(): void {
+  constructor() {
     this.matches = [
       {id: 1, studentName: 'Daphne Vasilakis', studentSection: 'Red', studentGroup: 'A', donorOrg: '', donorName: 'Nyree Hidalgo', donorAddress: '142 Main Street Goshen, NY 10924', donation: '225'},
       {id: 2, studentName: 'Daphne Vasilakis', studentSection: 'Red', studentGroup: 'A', donorOrg: 'Persico True Value', donorName: 'Gao Shen', donorAddress: 'PO Box 1118 Pine Bush, NY 12566', donation: '112.5'},
@@ -415,5 +413,9 @@ export class MatchTableComponent implements AfterViewInit {
       {id: 375, studentName: 'Shaya Gerber', studentSection: 'Pink', studentGroup: 'U', donorOrg: '', donorName: '', donorAddress: '', donation: ''},
       {id: 376, studentName: 'Shaya Gerber', studentSection: 'Pink', studentGroup: 'U', donorOrg: '', donorName: '', donorAddress: '', donation: ''}
     ]
+  }
+
+  ngAfterViewInit(): void {
+
   }
 }
