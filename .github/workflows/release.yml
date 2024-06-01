@@ -31,7 +31,7 @@ jobs:
         run: |
           echo "tym.hobynye.org" > dist/thank-you-matcher/CNAME
           echo "" > dist/thank-you-matcher/.nojekyll
-          tar -czf thank-you-matcher.tar.gz dist/thank-you-matcher/*
+          tar -czf thank-you-matcher.tar.gz dist/thank-you-matcher/browser/*
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
