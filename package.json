@@ -23,7 +23,7 @@
     "@angular/router": "^17.2.1",
     "rxjs": "~7.8.1",
     "tslib": "^2.6.2",
-    "zone.js": "~0.14.0"
+    "zone.js": "~0.15.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.2.0",
@@ -31,7 +31,7 @@
     "@angular/compiler-cli": "^17.2.1",
     "@qiwi/semantic-release-gh-pages-plugin": "^5.2.12",
     "@types/jasmine": "~5.1.4",
-    "jasmine-core": "~5.4.0",
+    "jasmine-core": "~5.7.0",
     "karma": "~6.4.2",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
@@ -39,7 +39,7 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "puppeteer": "^23.0.0",
     "semantic-release": "^24.0.0",
-    "typescript": "~5.4.0"
+    "typescript": "~5.8.0"
   },
   "release": {
     "branches": [
